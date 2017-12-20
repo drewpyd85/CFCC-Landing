@@ -4,10 +4,14 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
+    Drew Ramasco - Front end developer
+    Cody Clifton - Designer
+    
+    
 
 # THANKS
 
-    <name>
+    digitalsavvy.com
 
 # TECHNOLOGY COLOPHON
 
