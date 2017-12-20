@@ -5,27 +5,22 @@
     background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url('../images/hero-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: right center;
     font-family: Arial, sans-serif;
+    
+    .hero-heading {
+        font-size: 3em;
+        color: $cf-blue;
+    }
     
     .custom-logo {
         position: absolute;
         top: 0;
         left: 0;
-        width: 300px;
+        max-width: 25%;
         height: auto;
         margin-top: 1vh;
         margin-left: 1vw;
-    }
-    
-    h1 {
-        color: $cf-blue;
-        font-weight: 700;
-    }
-    
-    .hero-cta {
-        background-color: $cf-red;
-        @include custom-btn;
-        font-weight: 700;
     }
     
     p {
@@ -43,10 +38,11 @@
 .price-section {
     
     .price-box {
-        max-width: 1100px;
+        max-width: 960px;
         margin: 0 auto;
         background-color: $cf-red;
         color: #fff;
+        box-shadow: 0px 0px 30px #000;
         display: flex;
         transform: translateY(-15vh);
         
@@ -106,6 +102,7 @@
 .cf-table th, .cf-table td {
     text-align: center;
     border: 0;
+    padding: 0.5rem;
 }
 
 .cf-table thead, .cf-table tbody tr:nth-child(odd) {
@@ -116,8 +113,222 @@
     background-color: $cf-blue;
 }
 
-@media screen and (max-width: 846px){
+//HOW IT WORKS SECTIONS CSS
+.how-it-works-section {
+    background-color: #fff;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+//ROBOT RIBBON SECTION CSS
+.robot-ribbon-section {
+    background-color: $cf-blue;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: #fff;
+    
+    img {
+        max-height: 500px;
+        width: auto;
+    }
+}
+
+//TESTIMONIAL SECTION CSS
+.testimonial-section {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.testimonial-bg {
+    background-color: $cf-red;
+    color: #fff;
+    position: relative;
+}
+
+.test-quote {
+    min-height: 300px;
+    padding: 5vh 5px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    font-style: italic;
+    font-size: 1.2em;
+    position: relative;
+    
+    span {
+        
+        .fa-quote-left {
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            font-size: 2.5em;
+        }
+        
+        .fa-quote-right {
+            position: absolute;
+            bottom: 20%;
+            right: -10%;
+            font-size: 3em;
+        }
+    }
+}
+
+.carousel-indicators li {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transform: scale(0.5);
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-right: 80px solid $cf-red;
+    position: absolute;
+    right: 20%;
+    transform: translate(0,-50%);
+}
+
+//BENEFITS SECTION
+.benefits-section {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+//CONTACT SECTION
+.contact-section {
+    background: url('../images/contact-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    min-height: 50vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    
+    iframe {
+        box-shadow: 0px 0px 30px #000;
+    }
+}
+
+//SPREAD THE WORD SECTION
+.spread-section {
+    background-color: #eeeeee;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.social-icon-row {
+    display: flex;
+    justify-content: center;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    div:nth-child(odd) {
+        background-color: $cf-red;
+    }
+    
+    div:nth-child(even) {
+        background-color: $cf-blue;
+    }
+    
+    i {
+        color: #fff;
+        font-size: 35px;
+    }
+}
+
+//FOOTER
+footer {
+    background-color: $cf-blue;
+    color: #fff;
+    padding: 1vmin;
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: none;
+            color: #eee;
+        }
+    }
+}
+
+.footer-logo {
+    max-width: 90%;
+    height: auto;
+}
+
+.footer-phone {
+    
+    color: $cf-blue;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 995px) {
+    .fa-quote-left {
+        display: none;
+    }
+        
+    .fa-quote-right {
+        display: none;
+    }
+    
+    .arrow-right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 846px) {
     .price-box {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .hero-section {
+        
+        .custom-logo {
+            max-width: 40%;
+        }
+        
+        .hero-heading {
+            font-size: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .social-icon-row {
+        
+        div {
+            
+            width: 40px;
+            height: 40px;
+            
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .footer-phone {
+        font-size: 1.5em;
     }
 }
