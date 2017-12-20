@@ -1,0 +1,123 @@
+//HERO SECTION CSS
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),url('../images/hero-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    
+    .custom-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: auto;
+        margin-top: 1vh;
+        margin-left: 1vw;
+    }
+    
+    h1 {
+        color: $cf-blue;
+        font-weight: 700;
+    }
+    
+    .hero-cta {
+        background-color: $cf-red;
+        @include custom-btn;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 20px;
+    }
+    
+    a {
+        color: $cf-blue;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}
+
+//PRICE SECTION CSS
+.price-section {
+    
+    .price-box {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: $cf-red;
+        color: #fff;
+        display: flex;
+        transform: translateY(-15vh);
+        
+        .price-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            
+            .left-price-title {
+                background-color: $cf-blue;
+                text-align: center;
+                padding: 5px;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+        
+            .right-price-title {
+                text-align: center;
+                padding: 5px;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 1.2em;
+            }
+            
+            .price-ul {
+                font-size: 1.2em;
+                font-weight: 700;
+                
+                .day {
+                    text-decoration: underline;
+                    margin-bottom: 0;
+                }
+                
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+//DATES SECTION CSS
+.dates-section {
+    background-color: #eeeeee;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.cf-table {
+    border: 1px solid black;
+    box-shadow: 0px 0px 30px #000;
+}
+
+.cf-table th, .cf-table td {
+    text-align: center;
+    border: 0;
+}
+
+.cf-table thead, .cf-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.cf-table thead, .cf-table tbody tr:nth-child(even) {
+    background-color: $cf-blue;
+}
+
+@media screen and (max-width: 846px){
+    .price-box {
+        flex-direction: column;
+    }
+}

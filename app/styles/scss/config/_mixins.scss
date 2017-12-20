@@ -189,3 +189,15 @@
     -moz-box-shadow:    0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
     box-shadow:         0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
 }
+
+@mixin custom-btn {
+    display: inline-block;
+    box-shadow: 0px 0px 30px #000;
+    color: #fff;
+    padding: 5px 2.5vw;
+    line-height: 2;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 auto;
+    font-size: 1.2em;
+}

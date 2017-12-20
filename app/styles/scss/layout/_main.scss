@@ -1,5 +1,14 @@
 body {
-    background-color: palegoldenrod;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-hr {
+    width: 100px;
+    border: 3px solid $cf-red;
 }
