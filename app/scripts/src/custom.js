@@ -39,3 +39,16 @@ $( document ).ready(function() {
     }
 });
 });
+
+$( document ).ready(function() {
+    $( ".left-price-title" ).on( "click", function() {
+        $('.price-box-left').not(this).removeClass('price-hidden');
+        $('.price-box-right').addClass('price-hidden');
+    });
+    
+     $( ".right-price-title" ).on( "click", function() {
+        $('.price-box-right').not(this).removeClass('price-hidden');
+        $('.price-box-left').addClass('price-hidden');
+    });
+});
+
